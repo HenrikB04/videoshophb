@@ -26,6 +26,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import org.springframework.lang.NonNull;
+
 /**
  * The central application class to configure the Spring container and run the application.
  *
@@ -50,7 +52,7 @@ public class VideoShop {
 		 * @see org.springframework.web.servlet.config.annotation.WebMvcConfigurer#addViewControllers(org.springframework.web.servlet.config.annotation.ViewControllerRegistry)
 		 */
 		@Override
-		public void addViewControllers(ViewControllerRegistry registry) {
+		public void addViewControllers(@NonNull ViewControllerRegistry registry) {
 			registry.addViewController(LOGIN_ROUTE).setViewName("login");
 			registry.addViewController("/").setViewName("index");
 		}

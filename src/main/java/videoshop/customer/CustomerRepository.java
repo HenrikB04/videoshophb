@@ -19,6 +19,7 @@ import videoshop.customer.Customer.CustomerIdentifier;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.util.Streamable;
+import org.springframework.lang.NonNull;
 
 /**
  * A repository interface to manage {@link Customer} instances.
@@ -32,5 +33,6 @@ interface CustomerRepository extends CrudRepository<Customer, CustomerIdentifier
 	 * Re-declared {@link CrudRepository#findAll()} to return a {@link Streamable} instead of {@link Iterable}.
 	 */
 	@Override
+	@NonNull
 	Streamable<Customer> findAll();
 }
