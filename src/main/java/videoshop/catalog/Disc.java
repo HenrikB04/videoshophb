@@ -88,7 +88,7 @@ public class Disc extends Product {
 		return type;
 	}
 
-	public String getdate() {
+	public String getDate() {
 		return date;
 	}
 }
